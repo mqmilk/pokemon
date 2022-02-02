@@ -1,0 +1,25 @@
+<% layout("layouts/boilerplate") %>
+
+
+    <divv class='container home justify-content-center align-items-center d-flex text-center'>
+        <div class="row">
+            <div class="col-md-12 order-2 order-md-1">
+                    <h1 class='text-success'>Guess the Name in Three Seconds!</h1>
+                    <a  id='guessName' class='btn btn-lg btn-light text-success hide' href='/pokemons/<%=pokemon._id %>'><%= pokemon.name%>(Click for more infomation)</a> 
+                
+                    <img src="\images\<%= pokemon.image[0].filename %>" class="d-block mx-auto w-40 img-thumbnail" alt=""> 
+                    <a id='guessLink' class='btn btn-lg btn-light text-info' href='/pokemons/guess'>Guess Again</a>
+                    <a id='guessLink' class='btn btn-lg btn-light text-info' href='/'>Home</a>            
+            </div>
+        </div>
+    </div>
+
+        <script>
+            window.onload = function () {
+               setTimeout(appeardiv,3000);
+            }
+            function appeardiv() {
+               const guessName = document.querySelector('#guessName');
+               guessName.classList.remove('hide')= "block";
+            }
+           </script> 

@@ -1,0 +1,29 @@
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-5" href="#">TW_Pokemon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex me-3" action="/pokemons/search" method='get'>
+        <input class="form-control" type="search" name="Search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+          <a class="nav-item nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-item nav-link" href="/pokemons/guess">Guess</a>
+          <a class="nav-item nav-link" href="/pokemons">Lists</a>
+          <a class="nav-item nav-link" href="/pokemons/create">Add</a>
+      </div>
+      <div class='navbar-nav ms-auto me-5'>
+        <% if(!currentUser) { %>
+          <a class="nav-item nav-link" href="/users/register">Register</a>
+          <a class="nav-item nav-link" href="/users/login">Log In</a>
+        <% }else { %>
+          <a class="nav-item nav-link" href="/users/logout">Log Out</a>
+        <% } %>
+      </div>  
+      </div>
+    </div>
+  </nav>

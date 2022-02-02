@@ -1,0 +1,57 @@
+<% layout("layouts/boilerplate") %>
+    <div class="container home">
+        <div class="row">  
+            <div class="col-lg-4 offset-lg-4 order-2 order-lg-1 mt-1">   
+                <div id="pokemonCarousel" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <% pokemon.image.forEach((img, i)=> { %>
+                            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                                <img src="\images\<%= img.filename %>" class="d-block w-100 img-thumbnail" alt="">
+                            </div>
+                        <% }) %>
+                    </div>
+                    <% if(pokemon.image.length> 1){ %>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pokemonCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pokemonCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <% } %>
+                </div>       
+                <div class="card">                    
+                    <div class='card-body'>
+                      <h5 class='card-title'><%= pokemon.name %></h5>
+                      <ul class='list-group list-group-flush card-text'>
+                        <li class='list-group-item'>Author: <%= pokemon.author.username %></li>
+                        <li class='list-group-item'>Type: 
+                            <% pokemon.type.forEach((type, i) => { %>
+                              <a href='/pokemons?type=<%= type %>'><%= type %> </a>
+                              <% if(i < pokemon.type.length -1){ %>
+                                ,
+                                <% } %>
+                            <% }) %>
+                        </li>
+                        <li class='list-group-item'>HP: <%= pokemon.HP %></li>
+                        <li class='list-group-item'>Speed: <%= pokemon.speed %></li>
+                        <li class='list-group-item'>Attack: <%= pokemon.attack %></li>
+                        <li class='list-group-item'>Defense: <%= pokemon.defense %></li>
+                     </ul>
+                    </div>
+                    <div class='card-footer d-flex justify-content-between'>
+                        <a href='/pokemons/<%= pokemon._id %>/edit' class="card-link btn btn-primary">Edit</a>   
+                        <form class='form-block' method='post' action='/pokemons/<%= pokemon._id %>/?_method=delete'>
+                            <button class='btn btn-danger'>Delete</button>
+                        </form>                        
+                        <a href="/pokemons/guess" class="card-link btn btn-info">Guess</a>   
+                                           
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

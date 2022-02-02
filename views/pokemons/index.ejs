@@ -1,0 +1,32 @@
+<% layout("layouts/boilerplate") %>
+<div class='container d-flex justify-content-center align-items-center'>
+<div class='row'>
+    <div class='col text-center'>
+        <h1 class='text-info my-3'><%= type %> Pokemons!</h1>
+        <% for(let pokemon of pokemons){ %>
+            <div class='card my-1'>
+                <div class='row'>
+                    <div class='col-md-4'>
+                        <% if(pokemon.image.length){ %>
+                            <img class='card-image img-thumbnail' src='/images/<%= pokemon.image[0].filename %>' alt='pokemon-img'>
+                        <% } %>
+                    </div>
+                    <div class='col-md-8'>
+                        <div class='card-body'>
+                            <a class='card-title h2' href='/pokemons/<%=pokemon._id %>'><%= pokemon.name %></a>
+                        </div>
+                        <p class='card-text'>
+                            <% pokemon.type.forEach((type, i) => { %>
+                                <a href='/pokemons?type=<%= type %>'><%= type %> </a>
+                                <% if(i < pokemon.type.length -1){ %>
+                                  ,
+                                  <% } %>
+                              <% }) %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+</div>

@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate') %>
+<div class="container home">
+<div class='row'>
+    <div class='col-md-4 offset-md-4'>
+        <div class='card shadow mt-2'>
+            <div class='card-body'>
+                <h1 class='text-info text-center'>Add One Pokemon!</h1>
+                <form class='form-group' method='post' action='/pokemons/create' novalidate enctype='multipart/form-data'>
+                    <div class='mb-3'>
+                        <label class='form-label' for='name'>Name:</label> 
+                        <input class='form-control' type='text' id='name' name='name' placeholder='Name' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='type'>Type:</label> 
+                        <input class='form-control' type='text' id='type' name='type' placeholder='Grass,Water' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='HP'>HP:</label> 
+                        <input class='form-control' type='text' id='HP' name='HP' placeholder='35' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='attack'>Attack:</label> 
+                        <input class='form-control' type='text' id='attack' name='attack' placeholder='35' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='defense'>Defense:</label> 
+                        <input class='form-control' type='text' id='defense' name='defense' placeholder='35' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='HP'>Speed:</label> 
+                        <input class='form-control' type='text' id='speed' name='speed' placeholder='35' required>
+                    </div>
+                    <div class='mb-3'>
+                        <label class='form-label' for='image'>Image:</label> 
+                        <input class='form-control' type='file' id='image' name='image' multiple />
+                    </div>
+                    <div class='d-grid'>
+                        <button class='btn btn-primary'>Create a new Pokemon</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

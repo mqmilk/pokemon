@@ -1,0 +1,12 @@
+.home {
+    height: 100vh;
+    background: url('/images/home.webp');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain;
+}
+
+.hide {
+    display:none;
+}
+
