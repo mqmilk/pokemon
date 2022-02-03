@@ -6,9 +6,9 @@
 - Passport for authentication
 
 ## Features:
- - Pokemon Searching
- - Pokemon Guessing
- - Pokemon Updating & deleting 
+ - Pokemon searching
+ - Pokemon guessing
+ - Pokemon updating & deleting 
  - Pokemon showing
  - Listing all Pokemons or certain type Pokemons
  - Authentication and Authorization
