@@ -1,6 +1,6 @@
 # pokemon
 You need to run npm install. 
-To deploy the app, you have to set up the enviroment by yourself, like the PORT number, the mongo database url in Atlas. 
+All copyrights go to Pokemon and this is only for fun, not for commerial use.
 For test, we use local computer to create mongoDB and have another url. 
 Run node app.js(in the main directory), you should be able to check the website on http://localhost:3000/. 
 You can CRUD(create, read, update, delete) pokemons in the website and update the MongoDB in the server side. 
