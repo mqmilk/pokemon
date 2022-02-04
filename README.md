@@ -1,4 +1,4 @@
-# pokemon app
+# Pokemon App
 ## Technologies:
 - MongoDB & Mongoose for the database
 - Node & Express for the backend
