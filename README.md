@@ -11,7 +11,7 @@
  - Pokemon updating & deleting 
  - Pokemon showing
  - Listing all Pokemons or certain type Pokemons
- - Authentication and Authorization
+ - Authentication and authorization
 
 
 ## Starting the App
