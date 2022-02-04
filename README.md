@@ -14,9 +14,10 @@
  - Authentication and authorization
 
 
-## Starting the App
+## Development of the App
 All copyrights go to Pokemon and this is only for fun, not for commerial use.
 
-- npm install to install all dependencies
-- npm start to run 
+- npm install
+- npm start
+- open [http://localhost:3000](http://localhost:3000) to view it in your browser.
  
